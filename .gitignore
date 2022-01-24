@@ -1,0 +1,10 @@
+node_modules
+coverage
+yarn.lock
+yarn-error.log
+build
+.env
+.env.test
+.env.local
+
+aws.md

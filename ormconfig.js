@@ -7,7 +7,7 @@ module.exports = {
         "build/entities/*.js"
     ],
     "migrations": [
-        process.env.PORT == 5001 ?
+        process.env.PORT == 5001 || !process.env.PORT == 5001 ?
         "src/database/migrations/*.ts" :
         "build/database/migrations/*.js"
 

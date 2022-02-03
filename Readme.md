@@ -81,7 +81,7 @@
 
 4 - Acesse a rota principal
 
-<http://localhost:5000/>
+<http://localhost:5000/v1/>
 
 ### Testando o projeto
 
@@ -114,7 +114,7 @@ Retorna todos os posts criados no banco de dados
 ##### Exemplo
 
 ---
-    http://localhost:5000/posts
+    http://localhost:5000/v1/posts
 ---
 
 **_POST_** /posts (em desenvolvimento)

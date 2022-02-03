@@ -1,10 +1,10 @@
-import { Router } from "express";
+import { Router } from 'express'
 import { MessageController } from './controllers/MessageController'
 import { GetAllPostController } from './controllers/GetAllPostController'
 
-const router = Router();
+const router = Router()
 
-const messageController = new MessageController();
+const messageController = new MessageController()
 const getAllPostController = new GetAllPostController()
 
 router.get('/', messageController.handle)

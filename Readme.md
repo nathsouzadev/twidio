@@ -93,6 +93,14 @@
 
 #### Testes de integração
 
+1 - Rode a aplicação em modo de desenvolvimento
+
+---
+    yarn run dev
+---
+
+1 - Rode os testes de integração no repositório /tests
+
 ---
     yarn test:integration
 ---

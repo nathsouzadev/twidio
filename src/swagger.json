@@ -1,0 +1,72 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "TwiDIO API",
+    "description": "API para aprendizado de TDD com Node.ts"
+  },
+  "contact": {
+    "email": "nathallyccd@gmail.com"
+  },
+  "license": "MIT",
+  "version": "1.0.0",
+  "servers": [
+    {
+      "url": "http://localhost:5000/v1",
+      "description": "Production API"
+    }
+  ],
+  "paths": {
+    "/posts": {
+      "post": {
+        "summary": "Cadastro de novos posts",
+        "description": "Rota para salvar novos posts",
+        "tags": ["Posts"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Post"
+              },
+              "examples": {
+                "post": {
+                  "value": {
+                    "author": "author@email.com",
+                    "content": "Tuite de exemplo"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/Post"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Post": {
+        "type": "object",
+        "properties": {
+          "author": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { Response } from "express";
+import { Response } from 'express'
 
 export type MockResponse<TResult> = Response & {
     state: {
@@ -7,22 +7,21 @@ export type MockResponse<TResult> = Response & {
     }
   }
 
-export function makeMockResponse<TResult>() {
-    const response = {
-      state: {
-      }
-    } as MockResponse<TResult>;
-  
-    response.status = (status: number) => {
-      response.state.status = status;
-      return response;
-    };
-  
-    response.json = (json: TResult) => {
-      response.state.json = json;
-      return response;
-    };
-  
-    return response;
+export function makeMockResponse<TResult> () {
+  const response = {
+    state: {
+    }
+  } as MockResponse<TResult>
+
+  response.status = (status: number) => {
+    response.state.status = status
+    return response
   }
-  
+
+  response.json = (json: TResult) => {
+    response.state.json = json
+    return response
+  }
+
+  return response
+}

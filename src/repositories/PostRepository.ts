@@ -13,4 +13,9 @@ export class PostRepository {
       const posts: Post[] = await this.manager.find(Post)
       return posts
     }
+
+    save = async (post: Post): Promise<Post> => {
+      const newPost: Post = await this.manager.save(post)
+      return newPost
+    }
 }
